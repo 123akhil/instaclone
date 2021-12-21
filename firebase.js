@@ -16,8 +16,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const db = getFirestore();
-const storage = getStorage();
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp(); // singelton pattern // if length of the app is null initialise the app else return the current app we have already initialized 
+const db = getFirestore(); // database
+const storage = getStorage(); // storage
 
 export { app, db, storage };
